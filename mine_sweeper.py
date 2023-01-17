@@ -5,9 +5,9 @@ from sys import setrecursionlimit as LimitBreak
 
 LimitBreak(10 ** 6)
 
-grid_width = 30
+grid_width = 50
 grid_height = 30
-mine_count = 500
+mine_count = 200
 
 mine_color = "#ff0000"
 flag_color = "#ffff00"

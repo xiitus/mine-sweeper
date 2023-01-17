@@ -246,6 +246,8 @@ class MineSweeper():
             "GAME CLEAR"
         )
 
+        mine_color = "#00ff00"
+
     def open_all(self):
 
         for j in range(self.height):

@@ -7,7 +7,7 @@ LimitBreak(10 ** 6)
 
 grid_width = 30
 grid_height = 30
-mine_count = 50
+mine_count = 1
 
 mine_color = "#ff0000"
 flag_color = "#ffff00"
@@ -136,7 +136,7 @@ class MineSweeper():
         if (label.cget("text") != "F"):
             bg = flag_color
             label.config(
-                text="🚩",
+                text=chr(128681),
                 bg=bg
             )
 
@@ -144,7 +144,7 @@ class MineSweeper():
             bg = empty_color
             label.config(
                 text="",
-                bg=bg
+                bg="background"
             )
 
     def open_cell(self, event):
@@ -238,6 +238,7 @@ class MineSweeper():
     def game_clear(self):
 
         self.open_all()
+        fg = "#53ed00"
 
         self.play_game = False
 
@@ -246,7 +247,7 @@ class MineSweeper():
             "GAME CLEAR"
         )
 
-        mine_color = "#00ff00"
+        
 
     def open_all(self):
 
@@ -266,8 +267,8 @@ class MineSweeper():
     def GetTextInfo(self, num):
 
         if (num == mine_constant):
-            text = "💣"
-            bg = mine_color
+            text = chr(128163)
+            bg = "#53ed00"
             fg = "#8b0000"
         elif (num == 0):
             text = ""
@@ -278,7 +279,6 @@ class MineSweeper():
             bg = empty_color
             fg = bg_color[num]
         return (text, bg, fg)
-
 
 # run game
 Application = tkinter.Tk()

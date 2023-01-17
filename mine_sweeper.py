@@ -7,7 +7,7 @@ LimitBreak(10 ** 6)
 
 grid_width = 30
 grid_height = 30
-mine_count = 70
+mine_count = 500
 
 mine_color = "#ff0000"
 flag_color = "#ffff00"
@@ -40,6 +40,7 @@ class MineSweeper():
         self.opened_count = 0
         self.open_mine = False
         self.play_game = False
+        self.cleared = False
 
         # initialize grid
         self.init_grid()
@@ -188,6 +189,7 @@ class MineSweeper():
             self.Application.after_idle(self.game_over)
 
         elif (self.opened_count == self.empty_count):
+            cleared = True
             self.Application.after_idle(self.game_clear)
 
     def open_round(self, i, j):
@@ -232,10 +234,12 @@ class MineSweeper():
 
         messagebox.showerror(
             "",
-            "GAME OVER"
+            "GAME OVER…" + chr(128128)
         )
 
     def game_clear(self):
+
+        self.all_green()
 
         self.open_all()
 
@@ -243,7 +247,7 @@ class MineSweeper():
 
         messagebox.showinfo(
             "",
-            "GAME CLEAR"
+            "GAME CLEAR !" + chr(128161)
         )
 
     def open_all(self):
@@ -258,14 +262,14 @@ class MineSweeper():
                     text=text,
                     bg=bg,
                     fg=fg,
-                    relief=tkinter.SUNKEN
+                    relief=tkinter.SUNKEN 
                 )
 
     def GetTextInfo(self, num):
 
         if (num == mine_constant):
             text = chr(128163)
-            bg = "#53ed00"
+            bg = "#ff0000"
             fg = "#8b0000"
         elif (num == 0):
             text = ""

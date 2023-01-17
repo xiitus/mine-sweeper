@@ -238,7 +238,6 @@ class MineSweeper():
     def game_clear(self):
 
         self.open_all()
-        fg = "#53ed00"
 
         self.play_game = False
 

@@ -262,7 +262,7 @@ class MineSweeper():
                     text=text,
                     bg=bg,
                     fg=fg,
-                    relief=tkinter.SUNKEN 
+                    relief=tkinter.SUNKEN
                 )
 
     def GetTextInfo(self, num):

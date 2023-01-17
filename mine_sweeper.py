@@ -121,6 +121,7 @@ class MineSweeper():
                 label = self.labels[j][i]
                 label.bind("<ButtonPress-1>", self.open_cell)
                 label.bind("<ButtonPress-2>", self.set_flag)
+                label.bind("<ButtonPress-3>", self.set_flag)
 
     def set_flag(self, event):
 

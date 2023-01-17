@@ -201,10 +201,10 @@ class MineSweeper():
         label = self.labels[j][i]
 
         if (label.cget("relief") != tkinter.RAISED):
-            return
+            return -1
 
         if (self.cells[j][i] == mine_constant):
-            return
+            return -1
 
         text, bg, fg = self.GetTextInfo(self.cells[j][i])
 

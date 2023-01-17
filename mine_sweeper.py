@@ -246,8 +246,6 @@ class MineSweeper():
             "GAME CLEAR"
         )
 
-        
-
     def open_all(self):
 
         for j in range(self.height):
@@ -278,6 +276,7 @@ class MineSweeper():
             bg = empty_color
             fg = bg_color[num]
         return (text, bg, fg)
+
 
 # run game
 Application = tkinter.Tk()

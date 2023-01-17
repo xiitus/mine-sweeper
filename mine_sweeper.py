@@ -7,7 +7,7 @@ LimitBreak(10 ** 6)
 
 grid_width = 30
 grid_height = 30
-mine_count = 1
+mine_count = 70
 
 mine_color = "#ff0000"
 flag_color = "#ffff00"
